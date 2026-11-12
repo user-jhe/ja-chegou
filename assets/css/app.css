@@ -1,0 +1,81 @@
+/* See the Tailwind configuration guide for advanced usage
+   https://tailwindcss.com/docs/configuration */
+
+@import "tailwindcss" source(none);
+@import "phoenix-colocated/ja_chegou/colocated.css";
+@source "../css";
+@source "../js";
+@source "../../lib/ja_chegou_web";
+/* Required for Tailwind to automatically pick up changes in colocated CSS files in dev */
+@source "../../_build/dev/phoenix-colocated/ja_chegou/*/";
+
+@import url("https://fonts.googleapis.com/css2?family=Redaction+35:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.pagina {
+  position: fixed;
+  inset: 0;
+  background-image: url("/images/fundo.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 6vh;
+  overflow: hidden;
+}
+
+.titulo {
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 800;
+  color: rgb(250, 166, 246);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  font-family: "Redaction 35", serif;
+}
+
+.resposta {
+  font-size: clamp(1.5rem, 2vw, 3.5rem);
+  font-weight: 400;
+  color: white;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+  margin: 2vh 0 0 0;
+  font-family: "Iosevka Charon Mono", monospace;
+}
+
+.avatar {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  image-rendering: pixelated;
+}
+
+.encontro {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  image-rendering: pixelated;
+  height: 300px;
+}
+
+.contador {
+  position: absolute;
+  bottom: 3vh;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+  font-family: "Iosevka Charon Mono", monospace;
+}
