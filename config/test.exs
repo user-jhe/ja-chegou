@@ -7,12 +7,6 @@ config :ja_chegou, JaChegouWeb.Endpoint,
   secret_key_base: "rp4HX3TjIvPyiRkeAmavxJypCav8Duenrgoues+T1i5XUVXWnDuZB0Xm3Kww619N",
   server: false
 
-# In test we don't send emails
-config :ja_chegou, JaChegou.Mailer, adapter: Swoosh.Adapters.Test
-
-# Disable swoosh api client as it is only required for production adapters
-config :swoosh, :api_client, false
-
 # Print only warnings and errors during test
 config :logger, level: :warning
 

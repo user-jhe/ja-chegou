@@ -8,12 +8,7 @@ defmodule JaChegou.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      JaChegouWeb.Telemetry,
-      {DNSCluster, query: Application.get_env(:ja_chegou, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: JaChegou.PubSub},
-      # Start a worker by calling: JaChegou.Worker.start_link(arg)
-      # {JaChegou.Worker, arg},
-      # Start to serve requests, typically the last entry
       JaChegouWeb.Endpoint
     ]
 

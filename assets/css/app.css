@@ -1,14 +1,4 @@
-/* See the Tailwind configuration guide for advanced usage
-   https://tailwindcss.com/docs/configuration */
-
-@import "tailwindcss" source(none);
 @import "phoenix-colocated/ja_chegou/colocated.css";
-@source "../css";
-@source "../js";
-@source "../../lib/ja_chegou_web";
-/* Required for Tailwind to automatically pick up changes in colocated CSS files in dev */
-@source "../../_build/dev/phoenix-colocated/ja_chegou/*/";
-
 @import url("https://fonts.googleapis.com/css2?family=Redaction+35:ital,wght@0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 

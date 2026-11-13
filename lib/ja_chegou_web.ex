@@ -40,8 +40,6 @@ defmodule JaChegouWeb do
     quote do
       use Phoenix.Controller, formats: [:html, :json]
 
-      use Gettext, backend: JaChegouWeb.Gettext
-
       import Plug.Conn
 
       unquote(verified_routes())
@@ -79,13 +77,8 @@ defmodule JaChegouWeb do
 
   defp html_helpers do
     quote do
-      # Translation
-      use Gettext, backend: JaChegouWeb.Gettext
-
       # HTML escaping functionality
       import Phoenix.HTML
-      # Core UI components
-      import JaChegouWeb.CoreComponents
 
       # Common modules used in templates
       alias Phoenix.LiveView.JS
